@@ -5,183 +5,77 @@
     <meta charset="UTF-8">
     <meta name="description" content="Um quiz para testar seus conhecimentos">
     <title>Quiz para programadores</title>
-    <style>
-        body {
-            font-family: sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-            width: 100%;
-            box-sizing: border-box;
-        }
-
-        header h1 {
-            margin-top: 0;
-            font-size: 2.5em;
-        }
-
-        header p {
-            font-size: 1.1em;
-            margin-bottom: 0;
-        }
-
-        main {
-            background-color: #fff;
-            padding: 30px;
-            margin: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            width: 80%;
-            max-width: 800px;
-            box-sizing: border-box;
-        }
-
-        section {
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #eee;
-        }
-
-        section:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
-        }
-
-        section h2 {
-            color: #333;
-            font-size: 1.8em;
-            margin-top: 0;
-            margin-bottom: 15px;
-        }
-
-        section p {
-            line-height: 1.6;
-            margin-bottom: 10px;
-        }
-
-        strong {
-            font-weight: bold;
-            color: #555;
-        }
-
-        i {
-            font-style: italic;
-            color: #777;
-        }
-
-        abbr {
-            cursor: help;
-            border-bottom: 1px dotted #999;
-        }
-
-        hr {
-            border: 0;
-            border-top: 1px solid #eee;
-            margin: 20px 0;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #555;
-        }
-
-        input[type="radio"],
-        input[type="text"],
-        input[type="password"] {
-            padding: 10px;
-            margin-bottom: 15px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            font-size: 1em;
-            box-sizing: border-box;
-        }
-
-        input[type="radio"] {
-            display: inline-block;
-            margin-right: 5px;
-            margin-bottom: 10px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 10px;
-            color: #777;
-            font-size: 0.9em;
-            margin-top: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <header>
-        <h1>Quiz interativo para programadores</h1>
-        <p>Teste seus conhecimentos em programação e veja qual pontuação você consegue fazer! </p>
+        <h1>Quiz Interativo para Programadores</h1>
+        <p>Teste seus conhecimentos e desafie-se com perguntas sobre tecnologia e programação!</p>
     </header>
     <main>
-        <section>
-            <h2>Sobre esse Quiz</h2>
-            <p> <strong>Este quiz foi</strong> desenvolvido para testar seus conhecimentos em programação, como
-                <i>linguagens de programação , conceitos básicos e mais</i></p>
-            <p>Você encontrará diferentes tipos de perguntas, incluindo múltipla escolha, texto e perguntas de data.
-                <br>Desafie-se com este Quiz!</br> </p>
-            <p>Você poderá encontrar alguns acrônimos como <abbr title="HyperText Markup Language">HTML</abbr> e <abbr
-                    title="Cascading Style Sheets">CSS</abbr>, que são comumente usados em questões
-                relacionadas a desenvolvimento Web </p>
-            <hr>
+        <section class="intro">
+            <h2>Sobre este Quiz</h2>
+            <p><strong>Este quiz foi</strong> criado para avaliar seu conhecimento em programação.</p>
+            <p>Encontre perguntas de múltipla escolha, texto e datas. <br>Vamos ver o quanto você sabe!</br></p>
+            <p>Atenção aos acrônimos como <abbr title="HyperText Markup Language">HTML</abbr> e <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
         </section>
-        <section>
-            <h2>Pergunta 1: Qual linguagem é usada para estruturar páginas Web?</h2>
-            <form>
-                <input type="radio" value="Python" id="p1a" name="pergunta1">
-                <label for="p1a">Python</label> <br>
-                <input type="radio" value="HTML" id="p1b" name="pergunta1">
-                <label for="p1b">HTML</label> <br>
-                <input type="radio" value="Ruby" id="p1c" name="pergunta1">
-                <label for="p1c">Ruby</label> <br>
-            </form>
-            <hr>
+
+        <section class="pergunta">
+            <div class="container-pergunta">
+                <h2>Pergunta 1</h2>
+                <p>Qual linguagem é usada para estruturar páginas Web?</p>
+                <form>
+                    <input type="radio" value="Python" id="p1a" name="pergunta1">
+                    <label for="p1a">Python</label> <br>
+                    <input type="radio" value="HTML" id="p1b" name="pergunta1">
+                    <label for="p1b">HTML</label> <br>
+                    <input type="radio" value="Ruby" id="p1c" name="pergunta1">
+                    <label for="p1c">Ruby</label>
+                </form>
+            </div>
         </section>
-        <section>
-            <h2> Pergunta 2: Na URL Https://www.google.com o trecho "google.com" é ____</h2>
-            <form>
-                <input type="text" id="p2" name="pergunta2" placeholder="Digite sua resposta...">
-            </form>
-            <hr>
+
+        <section class="pergunta">
+            <div class="container-pergunta">
+                <h2>Pergunta 2</h2>
+                <p>Na URL "https://www.google.com" o trecho "google.com" é ____</p>
+                <form>
+                    <input type="text" id="p2" name="pergunta2" placeholder="Digite sua resposta...">
+                </form>
+            </div>
         </section>
-        <section>
-            <h2> Pergunta 3: Escreva um exemplo de senha forte </h2>
-            <form>
-                <input type="password" id="p3" name="pergunta3" placeholder="Digite Uma Senha...">
-            </form>
-            <hr>
+
+        <section class="pergunta">
+            <div class="container-pergunta">
+                <h2>Pergunta 3</h2>
+                <p>Escreva um exemplo de senha forte:</p>
+                <form>
+                    <input type="password" id="p3" name="pergunta3" placeholder="Digite uma senha...">
+                </form>
+            </div>
         </section>
-        <section>
-            <h2> Pergunta 4: Qual o ano de lançamento da linguagem JavaScript? </h2>
-            <form>
-                <input type="number" id="p4" name="pergunta4" placeholder="Digite o ano...">
-            </form>
+
+        <section class="pergunta">
+            <div class="container-pergunta">
+                <h2>Pergunta 4</h2>
+                <p>Qual o ano de lançamento da linguagem JavaScript?</p>
+                <form>
+                    <input type="number" id="p4" name="pergunta4" placeholder="Digite o ano...">
+                </form>
+            </div>
+        </section>
+
+        <section class="final">
+            <button onclick="verificarRespostas()">Verificar Pontuação</button>
+            <div id="resultado"></div>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p>Desenvolvido com 💻 por um entusiasta de programação.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
